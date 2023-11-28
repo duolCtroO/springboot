@@ -1,9 +1,7 @@
 package OortCloud.springboot.servlet;
 
-import OortCloud.springboot.ComplexHelloService;
-import OortCloud.springboot.HelloBoot;
+import OortCloud.springboot.HelloBootController;
 import OortCloud.springboot.SimpleHelloService;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -23,7 +21,7 @@ public class MyFrontServlet extends HttpServlet {
 
     public MyFrontServlet(GenericApplicationContext applicationContext){
         gac = applicationContext;
-        gac.registerBean(HelloBoot.class);
+        gac.registerBean(HelloBootController.class);
         gac.registerBean(SimpleHelloService.class);
         //gac.registerBean(ComplexHelloService.class); HelloService 구현체 중복 에러
         gac.refresh();
@@ -34,7 +32,7 @@ public class MyFrontServlet extends HttpServlet {
         if(req.getRequestURI().equals("/hello")){
             //요청 메세지, name 찾기
             String name = req.getParameter("name");
-            HelloBoot helloBoot = gac.getBean(HelloBoot.class);
+            HelloBootController helloBoot = gac.getBean(HelloBootController.class);
             String res = helloBoot.hello(name);
             //응답 메세지 세팅
             resp.setContentType(MediaType.TEXT_PLAIN_VALUE);
