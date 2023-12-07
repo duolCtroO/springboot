@@ -22,6 +22,7 @@ public class HelloBootController {
     @GetMapping("/hello")
     @ResponseBody
     public String hello(String name){
+        if(name.isEmpty() || name.length() == 0) throw new IllegalArgumentException();
         return helloService.service(Objects.requireNonNull(name));
     }
 }
