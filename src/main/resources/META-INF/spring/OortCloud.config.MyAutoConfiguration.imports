@@ -1,0 +1,2 @@
+OortCloud.config.autoConfig.DispatcherServletConfiguration
+OortCloud.config.autoConfig.TomcatWebServerConfiguration
