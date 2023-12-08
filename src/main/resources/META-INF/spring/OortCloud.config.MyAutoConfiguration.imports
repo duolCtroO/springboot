@@ -1,2 +1,3 @@
 OortCloud.config.autoConfig.DispatcherServletConfiguration
 OortCloud.config.autoConfig.TomcatWebServerConfiguration
+OortCloud.config.autoConfig.JettyWebServerConfiguration
