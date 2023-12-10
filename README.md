@@ -1,3 +1,3 @@
-Study Spring Boot
+토비의 스프링부트 공부
 
 
