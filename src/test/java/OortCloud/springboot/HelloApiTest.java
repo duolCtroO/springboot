@@ -33,7 +33,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class HelloApiTest {
 
-    private final static String TEST_URL = "http://localhost:8080/hello?name={name}";
+    private final static String TEST_URL = "http://localhost:8080/study/hello?name={name}";
 
     @UnitTest
     void hello(){
